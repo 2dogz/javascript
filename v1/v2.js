@@ -5,5 +5,5 @@ cv.readImage('/Users/kylewebb/Desktop/mesh_scraper/size_images/imgs/279729.jpg',
     throw err;
   }
 
-img.save('images/000011.jpg');
+img.save('images/000012.jpg');
 });

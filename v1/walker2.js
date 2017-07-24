@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var walkPath = '/Users/kylewebb/Desktop/mesh_scraper/size_images/imgs';
+var walkPath = '/Users/kylewebb/Desktop/mesh_scraper/size_images/old_imgs';
 
 var walk = function (dir, done) {
     fs.readdir(dir, function (error, list) {
@@ -33,7 +33,19 @@ var walk = function (dir, done) {
                       if (err) {
                         throw err;
                       }
+                      var resemble = require('node-resemble-v2');
 
+                      //var github_img1 = ;
+                      var github_img1 = fs.readFileSync(file);
+                      var github_img2 = fs.readFileSync('images/vaporm.jpg');
+
+                      resemble(github_img1).onComplete(function(data){
+                          console.log(data);
+                      });
+
+                      resemble(github_img1).compareTo(github_img2).onComplete(function(data){
+                          console.log(data);
+                      });
                     //img.save('images/000012.jpg');
                     });
                     console.log(file);
