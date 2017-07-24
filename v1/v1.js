@@ -1,6 +1,6 @@
 const cv = require('opencv');
 
-cv.readImage('zebra.jpg', function (err, img) {
+cv.readImage('images/zebra.jpg', function (err, img) {
   if (err) {
     throw err;
   }
@@ -24,34 +24,3 @@ cv.readImage('zebra.jpg', function (err, img) {
   // save img
   img.save('zbra.jpg');
 });
-function getBase64Image(img) {
-    // Create an empty canvas element
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    // Copy the image contents to the canvas
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-
-    // Get the data-URL formatted image
-    // Firefox supports PNG and JPEG. You could check img.src to
-    // guess the original format, but be aware the using "image/jpg"
-    // will re-encode the image.
-    var dataURL = canvas.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-}
-var a = new Image(),
-    b = new Image();
-var a_base64 = getBase64Image('zbra.jpg'),
-    b_base64 = getBase64Image('blga.jpg');
-
-if (a_base64 === b_base64)
-{
-    console.log('yes')// they are identical
-}
-else
-{
-    console.log('no')// you can probably guess what this means
-}
