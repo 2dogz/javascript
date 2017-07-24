@@ -14,7 +14,7 @@ cv.readImage('images/zebra.jpg', function (err, img) {
 
   // do some cool stuff with img
   const lowThresh = 0;
-  const highThresh = 150;
+  const highThresh = 330;
   const iterations = 1;
 
   img.canny(lowThresh, highThresh);
@@ -22,5 +22,5 @@ cv.readImage('images/zebra.jpg', function (err, img) {
   //let bound = contours.boundingRect(largestAreaIndex);
   //largestContourImg.rectangle([bound.x, bound.y], [bound.width, bound.height], WHITE, 2);
   // save img
-  img.save('zbra.jpg');
+  img.save('zbra2.jpg');
 });
