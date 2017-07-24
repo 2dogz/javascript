@@ -1,5 +1,7 @@
 # javascript
--7-23-17-\n
+#
+#
+#-7-23-17-
 Objective:
   1. learn basic JS
   2. build a program that compares 2 pictures
