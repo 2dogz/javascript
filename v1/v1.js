@@ -22,5 +22,5 @@ cv.readImage('images/zebra.jpg', function (err, img) {
   //let bound = contours.boundingRect(largestAreaIndex);
   //largestContourImg.rectangle([bound.x, bound.y], [bound.width, bound.height], WHITE, 2);
   // save img
-  img.save('zbra2.jpg');
+  img.save('images/00001.jpg');
 });
