@@ -1,6 +1,6 @@
 const cv = require('opencv');
 
-cv.readImage('images/zebra.jpg', function (err, img) {
+cv.readImage('/Users/kylewebb/Desktop/mesh_scraper/size_images/imgs/279729.jpg', function (err, img) {
   if (err) {
     throw err;
   }
@@ -22,5 +22,5 @@ cv.readImage('images/zebra.jpg', function (err, img) {
   //let bound = contours.boundingRect(largestAreaIndex);
   //largestContourImg.rectangle([bound.x, bound.y], [bound.width, bound.height], WHITE, 2);
   // save img
-  img.save('images/00001.jpg');
+  img.save('images/000010.jpg');
 });
