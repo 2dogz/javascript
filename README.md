@@ -1,6 +1,6 @@
 # javascript
 #
-#
+
 #-7-23-17-
 Objective:
   1. learn basic JS
